@@ -152,7 +152,7 @@ def dhondt(year, min_seats=6, parliament_size=751, max_seats=96):
     pop = get_pop(year)
     tmp = deepcopy(pop)
 
-    rem = 751
+    rem = parliament_size
     for item in tmp:
         rem -= min_seats
         tmp[item] = Result(pop[item])
